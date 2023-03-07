@@ -1,0 +1,70 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+    .nav-list{
+        position: relative;
+        display: flex;
+        list-style: none;
+        .nav-item{
+            min-width: 10rem;
+            text-align: center;
+            padding-block: 1rem;
+            .nav-link{
+                font-family: 'Roboto', sans-serif;
+                text-transform: uppercase;
+                color: goldenrod;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.nav-item:nth-child(2):hover ~ .active {
+    transform: translateX(10rem);
+}
+.nav-item:nth-child(3):hover ~ .active {
+    transform: translateX(20rem);
+}
+.nav-item:nth-child(4):hover ~ .active {
+    transform: translateX(30rem);
+}
+
+// Tamaño máximo en el que la barra de navegación debe ser responsive
+$breakpoint: 768px;
+
+.navbar {
+  @media(max-width: $breakpoint) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.nav-list {
+  @media(max-width: $breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.nav-item {
+  @media(max-width: $breakpoint) {
+    width: 100%;
+  }
+}
+
+.nav-link {
+  @media(max-width: $breakpoint) {
+    padding: 0.5rem;
+  }
+}
+
+.active {
+  @media(max-width: $breakpoint) {
+    display: none;
+  }
+}
+
+

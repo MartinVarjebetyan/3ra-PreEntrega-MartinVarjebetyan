@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@500&display=swap');
+
+// Import
+@import "navbar";
+@import "main-footer";
+
+// maps
+$style: (
+  color: gold,
+  color2: goldenrod,
+  centro: center,
+  tFuente: 25px,
+  cFuente: #d7d7d7,
+);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: black;
+}
+
+// nesting
+.cabeza {
+    background-color: black;
+    .container{
+        max-width: 98rem;
+        margin-inline: auto;
+        padding-inline: 1.5rem;
+        .active{
+            position: absolute;
+            bottom: -1rem;
+            height: 2px;
+            width: 10rem;
+            background-color: gold;
+            transition: transform 0.25s;
+        }
+    }
+}
+
+
+// extend
+.mitexto {
+    color: goldenrod;
+    font-family:  "Roboto", sans-serif;
+    text-align: justify;
+    padding: 25px;
+}
+.mitexto1 {
+    @extend .mitexto;
+}
+
+.parrafo {
+    font-family:  "Roboto", sans-serif;
+    color: map-get($map: $style, $key: cFuente);
+    font-size: map-get($map: $style, $key: tFuente);
+    padding-right: 50px;
+}
+.copyrigth {
+    @extend .parrafo;
+    font-size: small;
+    text-align: end;
+}
+
+
+
+
+.texto{
+    @media (max-width: $breakpoint){
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+}
+.mitexto {
+    @media (max-width: $breakpoint){
+        font-size: 25px;
+    }
+ }   
+.mitexto1 {
+    @media (max-width: $breakpoint){
+        font-size: 20px;
+    }
+}
+.parrafo {
+    @media (max-width: $breakpoint){
+        font-size: 15px;
+    }
+}
+
+
+
+
+.maps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 50px;
+}
+
+.boton-enviar {
+    @extend .maps
+}
