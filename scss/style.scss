@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:wght@500&display=swap');
 
 // Import
-@import "navbar";
+
 @import "main-footer";
 
 // maps
@@ -15,6 +15,7 @@ $style: (
   cFuente: #d7d7d7,
 );
 
+$breakpoint: 768px;
 
 *{
     margin: 0;

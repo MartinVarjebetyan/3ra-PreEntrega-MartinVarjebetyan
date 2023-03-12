@@ -15,27 +15,31 @@
     <title>MV-Inicio</title>
 </head>
 <body>
-    <!-- header flex  -->
+    <!-- full bootstrap  -->
     <header class="cabeza">
-        <nav class="navbar container">
-            <a href="index.html" class="nav-link"><img src="./assets/iconos/94781c301a0d70f829aa824926fd6fbb.png" alt="logo"></a>
-            <!-- <input type="checkbox" id="menu-toggle"> Botón de hamburguesa -->
-            <!-- <label for="menu-toggle" class="menu-icon">&#9776;</label> Icono de hamburguesa -->
-                <ul class="nav-list">
-                    <li class="nav-item">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container p-3 mb-2">
+                <a href="index.html" class="nav-link btn btn-warning"><img src="./assets/iconos/94781c301a0d70f829aa824926fd6fbb.png" alt="logo"></a>
+                <button class="navbar-toggler btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon btn btn-warning"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">  
+                <ul class="navbar-nav">
+                    <li class="nav-item btn btn-warning">
                         <a href="./pages/bio.html" class="nav-link">Bio</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item btn btn-warning">
                         <a href="./pages/contacto.html" class="nav-link">Contacto</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item btn btn-warning">
                         <a href="./pages/programa.html" class="nav-link">Programa</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item btn btn-warning">
                         <a href="./pages/servicios.html" class="nav-link">Servicios</a>
                     </li>
-                    <div class="active"></div>
-                </ul>   
+                </ul> 
+            </div>      
         </nav>
     </header>
 
@@ -61,11 +65,20 @@
         <!-- footer-grid -->
     <footer>   
         <div class="footer">
-            <button class="btn"> <a class="bt" href="./pages/programa.html">Quiero una asesoría</a></button>
-        
-            <div class="iconos">
-                <a href="https://web.whatsapp.com/" class="icono1" target="_blank"><img src="/assets/iconos/whatsapp.png" width="50" alt="Logo de WhatsApp"></a>      
-                <a href="https://www.instagram.com/" class="icono1" target="_blank"><img src="./assets/iconos/instagram.png" width="50" alt="Logo de instagram"></a>
+            <div class="container text-center">
+                <a href="./pages/programa.html" role="button">
+                    <span class="btn btn-warning">Quiero una asesoría</span>
+                </a>
+            </div>
+            <div class="iconos container text-center">
+                <div class="row">  
+                    <div class="col"> 
+                        <a href="https://web.whatsapp.com/" class="icono1" target="_blank"><img src="./assets/iconos/whatsapp.png" width="50" alt="Logo de WhatsApp"></a>    
+                    </div> 
+                    <div class="col"> 
+                        <a href="https://www.instagram.com/" class="icono1" target="_blank"><img src="./assets/iconos/instagram.png" width="50" alt="Logo de instagram"></a>
+                    </div> 
+                </div>     
             </div>
  
             <p class="copyrigth"> Martin Varjebetyan © 2023. Todos los derechos reservados</p>
