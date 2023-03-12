@@ -36,6 +36,41 @@
 // Tamaño máximo en el que la barra de navegación debe ser responsive
 $breakpoint: 768px;
 
+
+/* Estilos para el botón de hamburguesa */
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Ocultar la lista de navegación por defecto */
+.nav-list {
+  display: none;
+}
+
+/* Mostrar la lista de navegación al hacer clic en el botón de hamburguesa */
+#menu-toggle:checked ~ .nav-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-block: 1rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+
+
+
+
 .navbar {
   @media(max-width: $breakpoint) {
     flex-direction: column;
