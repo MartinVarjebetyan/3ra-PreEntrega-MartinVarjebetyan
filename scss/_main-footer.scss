@@ -1,16 +1,32 @@
+$breakpoint: 768px;
+
+
+// maps
+$style: (
+  color: gold,
+  color2: goldenrod,
+  centro: center,
+  tFuente: 25px,
+  cFuente: #d7d7d7,
+);
+
+
+
+
 .contenedor {  display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 3fr 0.5fr;
     grid-auto-columns: 1fr;
     gap: 8px 0px;
-    grid-auto-flow: row;
+    grid-auto-flow: column;
     justify-content: space-between;
     align-content: space-around;
-    justify-items: auto;
+    justify-items: center;
     align-items: center;
     grid-template-areas:
-      "imagen-main texto"
-      "footer footer";
+      "imagen-main"
+      "texto"
+      "footer       footer";
   
   
     .footer {  display: grid;
@@ -36,12 +52,66 @@
         .imagen-main { grid-area: imagen-main; }
         
         .texto { grid-area: texto;
-      text-align: end;
+        text-align: center;
+
+          .sub-texto {grid-area: texto;}
       }
 
     
     }
 } 
+
+
+// extend
+.mitexto {
+  color: goldenrod;
+  font-family:  "Roboto", sans-serif;
+  text-align: justify;
+  padding: 25px;
+}
+.mitexto1 {
+  @extend .mitexto;
+}
+
+.sub-texto {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  .parrafo {
+      font-family:  "Roboto", sans-serif;
+      color: map-get($map: $style, $key: cFuente);
+      font-size: map-get($map: $style, $key: tFuente);
+      padding-right: 50px;
+  }
+}
+
+.texto{
+  @media (max-width: $breakpoint){
+      margin-top: 100px;
+      margin-left: 50px;
+  }
+}
+.mitexto {
+  @media (max-width: $breakpoint){
+      font-size: 25px;
+  }
+}   
+.mitexto1 {
+  @media (max-width: $breakpoint){
+      grid-area: texto;
+      font-size: 20px; 
+  }
+}
+.parrafo {
+  @media (max-width: $breakpoint){
+      font-size: 15px;
+  }
+}
+
+
+
+
+
 // .btn {
 //   font-size: 2rem;
 //   font-weight: 400;
